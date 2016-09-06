@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/title"/>
+        <TextView
+            style="@style/title_text"
+            android:text="@string/talent_title"/>
+    </RelativeLayout>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/btnNew"
+            style="@style/main_tab_button"
+            android:text="最新"/>
+        <RadioButton
+            android:id="@+id/btnExperience"
+            style="@style/main_tab_button"
+            android:text="经验"/>
+        <RadioButton
+            android:id="@+id/btnEducation"
+            style="@style/main_tab_button"
+            android:text="学历"/>
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/intalent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
