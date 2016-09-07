@@ -17,7 +17,7 @@
     <LinearLayout
         style="@style/group_item">
         <LinearLayout
-            android:id="@+id/phoneBinding"
+            android:id="@+id/phone_binding"
             style="@style/index_item">
             <TextView
 
@@ -30,6 +30,7 @@
         <TextView
             style="@style/segmentation"/>
         <LinearLayout
+            android:id="@+id/set_password"
             style="@style/index_item">
             <TextView
 
@@ -80,6 +81,7 @@
         </LinearLayout>
     </LinearLayout>
     <Button
+        android:id="@+id/logout"
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

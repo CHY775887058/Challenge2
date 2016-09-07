@@ -74,6 +74,6 @@ public class SalaryMain extends Activity implements View.OnClickListener,Mine.bt
 
     @Override
     public void onBtnSettingClick() {
-        startActivity(new Intent(this,Setting.class));
+        startActivity(new Intent(this,Settings.class));
     }
 }

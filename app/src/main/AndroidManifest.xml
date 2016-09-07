@@ -23,8 +23,10 @@
         <activity android:name=".SalaryMain" />
         <activity android:name=".TalentMain"/>
         <activity android:name=".AddPosition"/>
-        <activity android:name=".Setting"/>
+        <activity android:name=".Settings"/>
         <activity android:name=".PhoneBinding"/>
+        <activity android:name=".ValidationPassword"/>
+        <activity android:name=".NewPassword"/>
     </application>
 
 </manifest>

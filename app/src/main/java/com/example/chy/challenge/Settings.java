@@ -10,9 +10,9 @@ import android.widget.RelativeLayout;
 /**
  * Created by 77588 on 2016/9/6.
  */
-public class Setting extends Activity implements View.OnClickListener{
+public class Settings extends Activity implements View.OnClickListener{
     private RelativeLayout back;
-    private LinearLayout phone_binding;
+    private LinearLayout phoneBinding,setPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,10 @@ public class Setting extends Activity implements View.OnClickListener{
     private void initview() {
         back = (RelativeLayout) findViewById(R.id.back);
         back.setOnClickListener(this);
+        phoneBinding = (LinearLayout) findViewById(R.id.phone_binding);
+        phoneBinding.setOnClickListener(this);
+        setPassword = (LinearLayout) findViewById(R.id.set_password);
+        setPassword.setOnClickListener(this);
     }
 
     @Override
@@ -30,8 +34,14 @@ public class Setting extends Activity implements View.OnClickListener{
             case R.id.back:
                 finish();
                 break;
-            case R.id.phoneBinding:
+            case R.id.phone_binding:
                 startActivity(new Intent(this,PhoneBinding.class));
+                break;
+            case R.id.set_password:
+                startActivity(new Intent(this,ValidationPassword.class));
+                break;
+            case R.id.logout:
+                startActivity(new Intent(this,Login.class));
             default:
                 break;
         }
