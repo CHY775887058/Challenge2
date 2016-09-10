@@ -9,19 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
+import com.example.chy.challenge.PopTalentExperience;
 import com.example.chy.challenge.R;
 
 /**
  * Created by 77588 on 2016/9/2.
+ *
  */
 public class Talent extends Fragment implements View.OnClickListener{
+    private TextView tv;
+    private PopTalentExperience popTalentExperience;
     private RadioButton btnNew,btnExperience,btnEducation;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_talent,container,false);
+        popTalentExperience = new PopTalentExperience(Talent.this);
+
         initview(rootView);
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -32,12 +39,14 @@ public class Talent extends Fragment implements View.OnClickListener{
         return rootView;
     }
     private void initview(View rootView) {
+
         btnNew = (RadioButton) rootView.findViewById(R.id.btnNew);
         btnNew.setOnClickListener(this);
         btnExperience = (RadioButton) rootView.findViewById(R.id.btnExperience);
         btnExperience.setOnClickListener(this);
         btnEducation = (RadioButton) rootView.findViewById(R.id.btnEducation);
         btnEducation.setOnClickListener(this);
+        tv = (TextView) rootView.findViewById(R.id.tv);
     }
 
 
@@ -47,13 +56,12 @@ public class Talent extends Fragment implements View.OnClickListener{
             case R.id.btnNew:
                 break;
             case R.id.btnExperience:
+                popTalentExperience.showAsDropDown(tv,btnExperience.getText().toString());
                 break;
             case R.id.btnEducation:
                 break;
             default:
                 break;
-
-
         }
 
     }

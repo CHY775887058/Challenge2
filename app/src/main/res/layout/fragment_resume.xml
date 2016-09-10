@@ -83,6 +83,7 @@
         style="@style/group_item"
         android:padding="10dp">
         <LinearLayout
+            android:id="@+id/objective"
             style="@style/index_item">
             <TextView
                 style="@style/tvStyle_mine"
@@ -98,6 +99,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"/>
         <LinearLayout
+            android:id="@+id/education"
             style="@style/index_item">
             <TextView
                 style="@style/tvStyle_mine"
@@ -114,6 +116,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"/>
         <LinearLayout
+            android:id="@+id/work_experience"
             style="@style/index_item">
             <TextView
                 style="@style/tvStyle_mine"
@@ -130,6 +133,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"/>
         <LinearLayout
+            android:id="@+id/project_experience"
             style="@style/index_item">
             <TextView
                 style="@style/tvStyle_mine"
@@ -146,6 +150,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"/>
         <LinearLayout
+            android:id="@+id/advantage"
             style="@style/index_item">
             <TextView
                 style="@style/tvStyle_mine"
