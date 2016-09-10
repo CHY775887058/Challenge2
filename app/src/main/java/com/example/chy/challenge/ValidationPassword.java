@@ -35,6 +35,7 @@ public class ValidationPassword extends Activity implements View.OnClickListener
                 break;
             case R.id.next:
                 startActivity(new Intent(this,NewPassword.class));
+                finish();
                 break;
             default:
                 break;

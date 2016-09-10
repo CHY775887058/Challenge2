@@ -12,4 +12,6 @@
     <color name="gray">#CCC</color>
     <color name="bgc">#EEE</color>
     <color name="gray2">#e5e5e5</color>
+    <color name="deepgray">#545454</color>
+    <color name="orange">#FF5400</color>
 </resources>
