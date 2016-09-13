@@ -14,8 +14,13 @@
 
     </RelativeLayout>
     <EditText
+        android:padding="10dp"
+        android:gravity="top"
+        android:id="@+id/editAdvantage"
+        android:maxLength="120"
         android:hint="如果你无法简洁的表达你的想法，那只说明你还不够了解它。
   -- 阿尔伯特·爱因斯坦"
+        android:textColorHint="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="5"
@@ -24,6 +29,8 @@
     <TextView
         style="@style/segmentation"/>
     <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:background="@color/white">
@@ -35,10 +42,11 @@
             android:text="看看别人怎么写"
             android:textColor="@color/green"/>
         <TextView
+            android:id="@+id/txtlength"
             android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="0/120"
+            android:text="0"
             android:textColor="@color/green"/>
     </LinearLayout>
 

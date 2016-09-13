@@ -18,7 +18,7 @@ public class WelcomSalary extends Activity implements Runnable{
         try{
             Thread.sleep(2000);
             startActivity(new Intent(this,SalaryMain.class));
-
+            finish();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

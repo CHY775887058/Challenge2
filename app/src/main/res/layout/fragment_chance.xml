@@ -17,21 +17,26 @@
             android:layout_width="50dp"
             android:layout_height="match_parent" />
         <LinearLayout
-            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="找工作"
-                style="@style/selected"/>
+                android:id="@+id/btnfindWork"
+                android:background="@drawable/border_chance_left"
+                android:textColor="@color/green"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="找工作"/>
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:text="找雇主"
-                style="@style/another"/>
+                android:id="@+id/btnfindBoss"
+                android:background="@drawable/border_chance_right"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="找雇主"/>
         </LinearLayout>
         <ImageView
             android:layout_width="50dp"

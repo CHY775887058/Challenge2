@@ -21,7 +21,7 @@ public class WelcomTalent extends Activity implements Runnable{
         try{
             Thread.sleep(2000);
             startActivity(new Intent(this,TalentMain.class));
-
+            finish();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

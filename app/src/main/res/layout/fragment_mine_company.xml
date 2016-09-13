@@ -15,6 +15,7 @@
             <!--设置按钮-->
 
             <ImageView
+                android:background="@drawable/setting"
                 android:id="@+id/setting"
                 android:layout_width="50dp"
                 android:layout_height="match_parent" />
