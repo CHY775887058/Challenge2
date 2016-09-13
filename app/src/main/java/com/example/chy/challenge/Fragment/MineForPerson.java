@@ -13,7 +13,7 @@ import com.example.chy.challenge.R;
 /**
  * Created by 77588 on 2016/9/1.
  */
-public class Mine extends Fragment implements View.OnClickListener{
+public class MineForPerson extends Fragment implements View.OnClickListener{
 
     public interface btnSettingListener{
         void onBtnSettingClick();
@@ -24,7 +24,7 @@ public class Mine extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_mine, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_mine_person, container, false);
         initview(rootView);
         return rootView;
     }

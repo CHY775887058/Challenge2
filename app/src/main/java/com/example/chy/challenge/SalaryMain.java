@@ -10,13 +10,13 @@ import android.widget.RadioButton;
 
 import com.example.chy.challenge.Fragment.Chance;
 import com.example.chy.challenge.Fragment.Messages;
-import com.example.chy.challenge.Fragment.Mine;
+import com.example.chy.challenge.Fragment.MineForPerson;
 import com.example.chy.challenge.Fragment.Resume;
 
 /**
  * Created by 77588 on 2016/9/1.
  */
-public class SalaryMain extends Activity implements View.OnClickListener,Mine.btnSettingListener{
+public class SalaryMain extends Activity implements View.OnClickListener,MineForPerson.btnSettingListener{
     private RadioButton btnChance,btnResume,btnMessage,btnMine;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +62,8 @@ public class SalaryMain extends Activity implements View.OnClickListener,Mine.bt
                 transaction.commit();
                 break;
             case R.id.btnMine:
-                Mine mine = new Mine();
-                transaction.replace(R.id.salary_layout,mine);
+                MineForPerson mineForPerson = new MineForPerson();
+                transaction.replace(R.id.salary_layout, mineForPerson);
                 transaction.commit();
                 break;
             default:

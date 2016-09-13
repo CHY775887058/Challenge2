@@ -7,7 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.example.chy.challenge.AboutResume.MyAdvantage;
 import com.example.chy.challenge.AboutResume.Objective;
+import com.example.chy.challenge.AboutResume.ProjectExperience;
+import com.example.chy.challenge.AboutResume.WorkExperience;
 import com.example.chy.challenge.R;
 
 /**
@@ -45,10 +49,13 @@ public class Resume extends Fragment implements View.OnClickListener {
             case R.id.education:
                 break;
             case R.id.work_experience:
+                startActivity(new Intent(getActivity(), WorkExperience.class));
                 break;
             case R.id.project_experience:
+                startActivity(new Intent(getActivity(), ProjectExperience.class));
                 break;
             case R.id.advantage:
+                startActivity(new Intent(getActivity(), MyAdvantage.class));
                 break;
             default:
                 break;

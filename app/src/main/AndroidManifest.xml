@@ -28,6 +28,9 @@
         <activity android:name=".ValidationPassword"/>
         <activity android:name=".NewPassword"/>
         <activity android:name=".AboutResume.Objective"/>
+        <activity android:name=".AboutResume.WorkExperience"/>
+        <activity android:name=".AboutResume.ProjectExperience"/>
+        <activity android:name=".AboutResume.MyAdvantage"/>
     </application>
 
 </manifest>

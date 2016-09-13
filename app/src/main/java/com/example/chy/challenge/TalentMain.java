@@ -9,14 +9,14 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.example.chy.challenge.Fragment.Messages;
-import com.example.chy.challenge.Fragment.Mine;
+import com.example.chy.challenge.Fragment.MineForCompany;
 import com.example.chy.challenge.Fragment.NoPosition;
 import com.example.chy.challenge.Fragment.Talent;
 
 /**
  * Created by 77588 on 2016/9/1.
  */
-public class TalentMain extends Activity implements View.OnClickListener,NoPosition.btnAddClickListener,Mine.btnSettingListener {
+public class TalentMain extends Activity implements View.OnClickListener,NoPosition.btnAddClickListener,MineForCompany.btnSettingListener {
     private RadioButton btnTalent,btnMessage,btnMine;
     private boolean HadPosition = true;
 
@@ -58,8 +58,8 @@ public class TalentMain extends Activity implements View.OnClickListener,NoPosit
                 transaction.commit();
                 break;
             case R.id.btnMine:
-                Mine mine = new Mine();
-                transaction.replace(R.id.talent_layout,mine);
+                MineForCompany mineForCompany = new MineForCompany();
+                transaction.replace(R.id.talent_layout, mineForCompany);
                 transaction.commit();
                 break;
             default:

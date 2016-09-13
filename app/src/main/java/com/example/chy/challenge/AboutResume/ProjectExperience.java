@@ -8,17 +8,17 @@ import android.widget.ImageView;
 import com.example.chy.challenge.R;
 
 /**
- * Created by 77588 on 2016/9/10.
+ * Created by 77588 on 2016/9/13.
  */
-public class Objective extends Activity implements View.OnClickListener{
+public class ProjectExperience extends Activity implements View.OnClickListener{
     private ImageView back,compelete;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.resume_objective);
+        setContentView(R.layout.resume_project_experience);
         initview();
     }
-
     private void initview() {
         back = (ImageView) findViewById(R.id.back );
         back.setOnClickListener(this);
