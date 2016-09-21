@@ -2,6 +2,7 @@ package com.example.chy.challenge.Fragment;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,11 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.chy.challenge.Adepter.Detail_Adepter;
 import com.example.chy.challenge.R;
+import com.example.chy.challenge.Srearch;
 import com.example.chy.challenge.pnlllist.PullToRefreshBase;
 import com.example.chy.challenge.pnlllist.PullToRefreshListView;
 
@@ -30,6 +33,7 @@ public class Chance extends Fragment implements View.OnClickListener{
 
     private Button btnFindWork,btnFindBoss;
     private GradientDrawable left,right;
+    private ImageView search;
 
 
     private Detail_Adepter detail_adepter;
@@ -98,7 +102,8 @@ public class Chance extends Fragment implements View.OnClickListener{
         btnFindBoss.setOnClickListener(this);
         left = (GradientDrawable) btnFindWork.getBackground();
         right = (GradientDrawable) btnFindBoss.getBackground();
-
+        search = (ImageView) v.findViewById(R.id.search);
+        search.setOnClickListener(this);
     }
 
     //获取当前时间
@@ -139,6 +144,9 @@ public class Chance extends Fragment implements View.OnClickListener{
                 right.setColor(getResources().getColor(R.color.white));
                 btnFindWork.setTextColor(getResources().getColor(R.color.white));
                 btnFindBoss.setTextColor(getResources().getColor(R.color.green));
+                break;
+            case R.id.search:
+                startActivity(new Intent(getActivity(), Srearch.class));
                 break;
             default:
                 break;
