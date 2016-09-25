@@ -83,14 +83,14 @@ public class Login extends Activity implements View.OnClickListener{
     }
 
     private void loginooo() {
-        telPhone = phone.getText().toString();
-        pass = passWord.getText().toString();
+        telPhone = phone.getText().toString().trim();
+        pass = passWord.getText().toString().trim();
         if (telPhone == null||"".equals(telPhone)){
             Toast.makeText(mContext,"用户名不能为空！",Toast.LENGTH_SHORT).show();
             return;
         }
         if (pass == null||"".equals(pass)){
-            Toast.makeText(mContext,"用户名不能为空！",Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext,"密码不能为空！",Toast.LENGTH_SHORT).show();
             return;
         }
         dialog.setMessage("正在登录...");
@@ -98,10 +98,11 @@ public class Login extends Activity implements View.OnClickListener{
         dialog.show();
         if (NetBaseUtils.isConnnected(mContext)) {
             new UserRequest(mContext, handler).Login(telPhone, pass, KEY);
-            dialog.dismiss();
         }else{
             Toast.makeText(mContext,R.string.net_error,Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
         }
+
     }
 
 
@@ -111,14 +112,27 @@ public class Login extends Activity implements View.OnClickListener{
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case KEY:
-                      if (msg.obj!=null){
-                          String resault = (String) msg.obj;
+                    if (msg.obj!=null){
+                        String resault = (String) msg.obj;
                           try {
                               JSONObject jsonObject = new JSONObject(resault);
                               if ("success".equals(jsonObject.optString("status"))){
                                   startActivity(new Intent(mContext,Identity.class));
+                                  dialog.dismiss();
+                                  finish();
                               }else {
                                   Toast.makeText(mContext,R.string.login_error,Toast.LENGTH_SHORT).show();
+                                  new Thread(){
+                                      @Override
+                                      public void run() {
+                                          try {
+                                              Thread.sleep(2000);
+                                          } catch (InterruptedException e) {
+                                              e.printStackTrace();
+                                          }
+                                      }
+                                  }.start();
+                                  dialog.dismiss();
                               }
                           } catch (JSONException e) {
                               e.printStackTrace();
