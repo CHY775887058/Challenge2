@@ -23,6 +23,9 @@ public class SalaryMain extends Activity implements View.OnClickListener,MineFor
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_salary);
         initview();
+        btnChance.setChecked(true);
+
+        btnChance.setTextColor(getResources().getColor(R.color.green));
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         Chance chance = new Chance();
@@ -43,25 +46,33 @@ public class SalaryMain extends Activity implements View.OnClickListener,MineFor
 
     @Override
     public void onClick(View view) {
+        btnChance.setTextColor(getResources().getColor(R.color.gray3));
+        btnMine.setTextColor(getResources().getColor(R.color.gray3));
+        btnMessage.setTextColor(getResources().getColor(R.color.gray3));
+        btnResume.setTextColor(getResources().getColor(R.color.gray3));
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         switch (view.getId()){
             case R.id.btnChance:
+                btnChance.setTextColor(getResources().getColor(R.color.green));
                 Chance chance = new Chance();
                 transaction.replace(R.id.salary_layout,chance);
                 transaction.commit();
                 break;
             case R.id.btnResume:
+                btnResume.setTextColor(getResources().getColor(R.color.green));
                 Resume resume = new Resume();
                 transaction.replace(R.id.salary_layout,resume);
                 transaction.commit();
                 break;
             case  R.id.btnMessage:
+                btnMessage.setTextColor(getResources().getColor(R.color.green));
                 Messages messages = new Messages();
                 transaction.replace(R.id.salary_layout,messages);
                 transaction.commit();
                 break;
             case R.id.btnMine:
+                btnMine.setTextColor(getResources().getColor(R.color.green));
                 MineForPerson mineForPerson = new MineForPerson();
                 transaction.replace(R.id.salary_layout, mineForPerson);
                 transaction.commit();
@@ -69,7 +80,6 @@ public class SalaryMain extends Activity implements View.OnClickListener,MineFor
             default:
                 break;
         }
-
     }
 
     @Override

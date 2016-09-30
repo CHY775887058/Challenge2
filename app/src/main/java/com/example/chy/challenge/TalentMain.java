@@ -25,6 +25,8 @@ public class TalentMain extends Activity implements View.OnClickListener,NoPosit
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_talent);
         initview();
+        btnTalent.setChecked(true);
+        btnTalent.setTextColor(getResources().getColor(R.color.green));
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         Talent talent = new Talent();
@@ -44,20 +46,26 @@ public class TalentMain extends Activity implements View.OnClickListener,NoPosit
 
     @Override
     public void onClick(View view) {
+        btnTalent.setTextColor(getResources().getColor(R.color.gray));
+        btnMessage.setTextColor(getResources().getColor(R.color.gray));
+        btnMine.setTextColor(getResources().getColor(R.color.gray));
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         switch (view.getId()){
             case R.id.btnTalent:
+                btnTalent.setTextColor(getResources().getColor(R.color.green));
                 Talent talent = new Talent();
                 transaction.replace(R.id.talent_layout,talent);
                 transaction.commit();
                 break;
             case R.id.btnMessage:
+                btnMessage.setTextColor(getResources().getColor(R.color.green));
                 Messages messages = new Messages();
                 transaction.replace(R.id.talent_layout,messages);
                 transaction.commit();
                 break;
             case R.id.btnMine:
+                btnMine.setTextColor(getResources().getColor(R.color.green));
                 MineForCompany mineForCompany = new MineForCompany();
                 transaction.replace(R.id.talent_layout, mineForCompany);
                 transaction.commit();

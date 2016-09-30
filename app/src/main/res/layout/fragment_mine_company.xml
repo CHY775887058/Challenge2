@@ -41,10 +41,16 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-
             android:layout_centerVertical="true"
             android:layout_marginLeft="30dp"
             android:id="@+id/picture" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_vip"
+            android:layout_alignBottom="@+id/picture"
+            android:layout_toLeftOf="@+id/linearLayout"
+            android:layout_toStartOf="@+id/linearLayout" />
 
         <LinearLayout
             android:gravity="center_vertical"

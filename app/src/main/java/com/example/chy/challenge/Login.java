@@ -68,7 +68,8 @@ public class Login extends Activity implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.login:
-                loginooo();
+                startActivity(new Intent(mContext,Identity.class));
+                //loginooo();
                 break;
             case R.id.forgetPwd:
                 startActivity(new Intent(this,ForgetPassWord.class));
