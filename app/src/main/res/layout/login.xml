@@ -10,8 +10,7 @@
         <include layout="@layout/title"/>
         <TextView
             style="@style/title_text"
-            android:text="@string/login_title"
-            />
+            android:text="@string/login_title"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_marginTop="20dp"

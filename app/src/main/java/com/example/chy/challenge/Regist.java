@@ -35,6 +35,7 @@ public class Regist extends Activity implements View.OnClickListener{
     private final int CHANGE_GET_CODE_TEXT2 = 3;
     private final int KEY_GET_CODE = 4;
     private final int KEY_REGIST = 5;
+    private final int KEY_REGIST_SUCCESS = 6;
     private boolean btnClickLicense = true;
     private int i = 60;
     private int count = 0;
@@ -157,9 +158,6 @@ public class Regist extends Activity implements View.OnClickListener{
                                 return;
                             }
                             if ("error".equals(jsonObject.optString("status"))){
-                                //验证成功，获取验证码
-//                                GetCode gc = new GetCode();
-//                                code = gc.GetCode(phone,mContext);
                                 new UserRequest(mContext, handler).GetCode(phone,KEY_GET_CODE);
                                 if (code!=null){
                                     btnClickLicense = false;
@@ -210,6 +208,8 @@ public class Regist extends Activity implements View.OnClickListener{
                         JSONObject jsonObject = new JSONObject((String) msg.obj);
                         if ("success".equals(jsonObject.optString("status"))){
                             startActivity(new Intent(mContext,Identity.class));
+                            Login.l.finish();
+                            finish();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

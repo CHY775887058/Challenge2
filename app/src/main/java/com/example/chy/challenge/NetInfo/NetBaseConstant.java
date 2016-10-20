@@ -17,8 +17,8 @@ public interface NetBaseConstant {
     /**
      * 网络请求IP
      */
-    public final static String NET_OLDBASE_HOST = "http://nurse.xiaocool.net/index.php?g=apps&m=index";
-    public final static String NET_BASE_HOST = "http://nurse.xiaocool.net/index.php?g=apps&m=index";
+    public final static String NET_OLDBASE_HOST = "http://122.114.156.127/index.php?g=apps&m=index&";
+    public final static String NET_BASE_HOST = "http://122.114.156.127/index.php?g=apps&m=index&";
     /**
      * 咨询图片加载IP
      */

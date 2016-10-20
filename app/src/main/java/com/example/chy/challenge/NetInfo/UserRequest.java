@@ -93,7 +93,7 @@ public class UserRequest {
             public void run() {
                 List<NameValuePair> parmas = new ArrayList<NameValuePair>();
                 parmas.add(new BasicNameValuePair("phone",phone));
-//                LogUtils.i("","");
+                LogUtils.i("Tip"," Flag"+parmas.toString());
                 String result = NetBaseUtils.getResponseForPost(UserNetConstant.CHECK_PHONE,parmas,mContext);
                 msg.what = KEY;
                 msg.obj = result;
@@ -117,8 +117,7 @@ public class UserRequest {
                 parmas.add(new BasicNameValuePair("phone",phone));
                 parmas.add(new BasicNameValuePair("password",password));
                 parmas.add(new BasicNameValuePair("code",code));
-                parmas.add(new BasicNameValuePair("usertype","1"));//1.个人2.企业
-                parmas.add(new BasicNameValuePair("password","2"));//1.iso2.android
+                parmas.add(new BasicNameValuePair("devicestate","2"));//1.iso2.android
                 String result = NetBaseUtils.getResponseForPost(UserNetConstant.REGIST,parmas,mContext);
                 msg.what = KEY;
                 msg.obj = result;

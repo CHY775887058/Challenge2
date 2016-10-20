@@ -36,7 +36,7 @@ public class Login extends Activity implements View.OnClickListener{
 
     private String telPhone,pass;
     private static final int KEY = 1;
-
+    public static Login l = null;
 
 
 
@@ -44,6 +44,7 @@ public class Login extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        l = this;
         mContext = this;
         initview();
 
@@ -68,8 +69,9 @@ public class Login extends Activity implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.login:
-                startActivity(new Intent(mContext,Identity.class));
-                //loginooo();
+                //登录功能已关闭，启用时删除startActivity方法，取消loginooo的注释
+                //startActivity(new Intent(mContext,Identity.class));
+                loginooo();
                 break;
             case R.id.forgetPwd:
                 startActivity(new Intent(this,ForgetPassWord.class));
@@ -140,7 +142,11 @@ public class Login extends Activity implements View.OnClickListener{
                           }
                       }
                     break;
+                case 6:
+                    finish();
+                    break;
             }
+
         };
     };
 }
