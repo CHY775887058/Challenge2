@@ -70,8 +70,8 @@ public class Login extends Activity implements View.OnClickListener{
         switch (view.getId()){
             case R.id.login:
                 //登录功能已关闭，启用时删除startActivity方法，取消loginooo的注释
-                //startActivity(new Intent(mContext,Identity.class));
-                loginooo();
+                startActivity(new Intent(mContext,Identity.class));
+                //loginooo();
                 break;
             case R.id.forgetPwd:
                 startActivity(new Intent(this,ForgetPassWord.class));

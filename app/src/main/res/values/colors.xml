@@ -15,4 +15,5 @@
     <color name="gray3">#959595</color>
     <color name="deepgray">#545454</color>
     <color name="orange">#FF5400</color>
+    <color name="translucent_gray">#5CCC</color>
 </resources>

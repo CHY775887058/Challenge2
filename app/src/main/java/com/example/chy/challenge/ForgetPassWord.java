@@ -6,11 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.chy.challenge.NetInfo.UserRequest;
@@ -31,7 +30,7 @@ public class ForgetPassWord extends Activity implements View.OnClickListener{
     private int count = 0;
     private EditText inputPhone,inputCode,inputNewPassword,inputNewPassword2;
     private Button getCode;
-    private RelativeLayout visiblep1,visiblep2,back;
+    private ImageView back;
     private Button complete;
     private Context mContext;
     private String phone,code,newPassWord;
@@ -49,13 +48,13 @@ public class ForgetPassWord extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.repwd);
+        setContentView(R.layout.forget_password);
         mContext = this;
         initview();
     }
 
     private void initview() {
-        back = (RelativeLayout) findViewById(R.id.back);
+        back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(this);
         inputPhone = (EditText) findViewById(R.id.phone_repwd);
         inputCode = (EditText) findViewById(R.id.code);
@@ -63,10 +62,6 @@ public class ForgetPassWord extends Activity implements View.OnClickListener{
         inputNewPassword2 = (EditText) findViewById(R.id.newpwd2);
         getCode = (Button) findViewById(R.id.getcode);
         getCode.setOnClickListener(this);
-        visiblep1 = (RelativeLayout) findViewById(R.id.visiblep1);
-        visiblep1.setOnClickListener(this);
-        visiblep2 = (RelativeLayout) findViewById(R.id.visiblep2);
-        visiblep2.setOnClickListener(this);
         complete = (Button) findViewById(R.id.complete);
         complete.setOnClickListener(this);
     }
@@ -87,24 +82,6 @@ public class ForgetPassWord extends Activity implements View.OnClickListener{
                     break;
                 }
                 grabCode();
-                break;
-            case R.id.visiblep1:
-                if (visibleFlagP1) {
-                    inputNewPassword.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    visibleFlagP1 = false;
-                }else {
-                    inputNewPassword.setInputType(0x81);
-                    visibleFlagP1 = true;
-                }
-                break;
-            case R.id.visiblep2:
-                if (visibleFlagP2) {
-                    inputNewPassword2.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    visibleFlagP2 = false;
-                }else {
-                    inputNewPassword2.setInputType(0x81);
-                    visibleFlagP2 = true;
-                }
                 break;
             case R.id.complete:
                 if (canUpdatePwd()){

@@ -9,7 +9,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.chy.challenge.NetInfo.UserRequest;
@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 public class Regist extends Activity implements View.OnClickListener{
     private Context mContext;
     private Button btnGetCode,registSave;
-    private RelativeLayout back;
+    private ImageView back;
     private EditText edtPhone,edtCode,edtPwd;
     private String phone,code;
     private final int KEY_CHECK_PHONE = 1;
@@ -48,7 +48,7 @@ public class Regist extends Activity implements View.OnClickListener{
     }
 
     private void initview() {
-        back = (RelativeLayout) findViewById(R.id.back);
+        back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(this);
         btnGetCode = (Button) findViewById(R.id.regist_getCode);
         btnGetCode.setOnClickListener(this);

@@ -31,7 +31,11 @@ public class Identity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.forperson:
-                startActivity(new Intent(this,WelcomTalent.class));
+                if (true){
+                    startActivity(new Intent(this,PersonIformationTalent.class));
+                }else {
+                    startActivity(new Intent(this,WelcomTalent.class));
+                }
                 break;
             case R.id.formoney:
                 startActivity(new Intent(this,WelcomSalary.class));

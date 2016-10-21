@@ -37,6 +37,7 @@
         <activity android:name=".AboutResume.ProjectExperience"/>
         <activity android:name=".AboutResume.MyAdvantage"/>
         <activity android:name=".Srearch"/>
+        <activity android:name=".PersonIformationTalent"/>
     </application>
 
 </manifest>

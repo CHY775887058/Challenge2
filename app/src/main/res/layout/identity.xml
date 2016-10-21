@@ -42,11 +42,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    <Button
-        android:background="@color/white"
-        android:textColor="@color/green"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="退出登录"/>
+    <!--<Button-->
+        <!--android:background="@color/white"-->
+        <!--android:textColor="@color/green"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="退出登录"/>-->
 
 </LinearLayout>
