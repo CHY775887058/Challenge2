@@ -57,47 +57,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/realname"
-                    android:text="王小妞"
-                    android:textSize="18sp"
-                    android:textColor="@color/green"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/gray"/>
-
+                    android:text="曾任"/>
                 <TextView
-                    android:id="@+id/myjob"
-                    android:text="人事经理"
-                    android:textSize="18sp"
                     android:textColor="@color/green"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" />
-                <ImageView
+                    android:layout_height="match_parent"
+                    android:text="网页设计"/>
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent"
+                    android:text="北京网络科技有限公司"/>
             </LinearLayout>
-
             <TextView
-                android:id="@+id/count"
-                android:text="公司规模20-99人"
-                android:textSize="14sp"
-                android:textColor="@color/deepgray"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="TA还一句话没有介绍哦"/>
 
-            <TextView
-                android:id="@+id/company_score"
-                android:text="综合评分2.3"
-                android:textSize="14dp"
-                android:textColor="@color/green"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout

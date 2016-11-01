@@ -1,6 +1,7 @@
 package com.example.chy.challenge.Fragment;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ import com.example.chy.challenge.R;
  */
 public class Resume extends Fragment implements View.OnClickListener {
     private LinearLayout objective,education,workExperience,projectExperience,advantage;
+    private Context mContext;
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

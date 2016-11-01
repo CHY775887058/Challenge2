@@ -2,54 +2,114 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
-        <include layout="@layout/title"/>
+
+        <include layout="@layout/title" />
+
         <TextView
-            android:gravity="center"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:text="烟台"/>
+            android:gravity="center"
+            android:text="烟台" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="match_parent" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
             <Button
                 android:id="@+id/btnfindWork"
-                android:background="@drawable/border_chance_left"
-                android:textColor="@color/green"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="找工作"/>
+                android:layout_weight="1"
+                android:background="@drawable/border_chance_left"
+                android:text="找工作"
+                android:textColor="@color/green" />
+
             <Button
                 android:id="@+id/btnfindBoss"
-                android:background="@drawable/border_chance_right"
-                android:textColor="@color/white"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="找雇主"/>
+                android:layout_weight="1"
+                android:background="@drawable/border_chance_right"
+                android:text="找雇主"
+                android:textColor="@color/white" />
         </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/search"
+            android:layout_toStartOf="@+id/search" />
+
         <ImageView
             android:id="@+id/search"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentTop="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_search" />
     </RelativeLayout>
-    <com.example.chy.challenge.pnlllist.PullToRefreshListView
-        android:id="@+id/lv_comprehensive"
+
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:drawSelectorOnTop="false"
-        android:scrollbars="none"/>
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/main_tab_button"
+            android:text="最新" />
+
+        <RadioButton
+            style="@style/main_tab_button"
+            android:text="最近" />
+
+        <RadioButton
+            style="@style/main_tab_button"
+            android:text="最热" />
+
+        <RadioButton
+            style="@style/main_tab_button"
+            android:text="评价" />
+
+        <RadioButton
+            style="@style/main_tab_button"
+            android:text="薪资" />
+
+        <RadioButton
+            style="@style/main_tab_button"
+            android:text="红包" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.example.chy.challenge.pnlllist.PullToRefreshListView
+                android:id="@+id/lv_comprehensive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawSelectorOnTop="false"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -25,4 +25,8 @@ public interface UserNetConstant extends NetBaseConstant {
      * 修改密码
      */
     public final static String CHANGE_PASSWORD = NET_BASE_HOST + "a=forgetpwd";
+    /**
+     * 获取招聘列表
+     */
+    public final static String GET_JOB_LIST = NET_BASE_HOST + "a=getjoblist";
 }

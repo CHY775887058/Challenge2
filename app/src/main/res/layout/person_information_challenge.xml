@@ -63,15 +63,44 @@
                 <ImageView style="@style/person_right_image" />
             </LinearLayout>
 
-            <TextView
-                style="@style/person_row_describe"
-                android:text="我的职业信息" />
+            <TextView style="@style/person_divider" />
 
             <LinearLayout style="@style/person_row_main">
 
                 <TextView
                     style="@style/person_text_main"
-                    android:text="我的职位" />
+                    android:text="性别" />
+
+                <TextView style="@style/air_cushion" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="女"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="男"
+                        android:textColor="@color/gray"
+                        android:textSize="18dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView style="@style/person_divider" />
+
+            <LinearLayout style="@style/person_row_main">
+
+                <TextView
+                    style="@style/person_text_main"
+                    android:text="目前所在城市" />
 
                 <TextView style="@style/air_cushion" />
 
@@ -88,30 +117,13 @@
 
                 <TextView
                     style="@style/person_text_main"
-                    android:text="接收简历邮箱" />
+                    android:text="工作年限" />
 
                 <TextView style="@style/air_cushion" />
 
                 <TextView
                     style="@style/persom_text_describe"
-                    android:text="选填" />
-
-                <ImageView style="@style/person_right_image" />
-            </LinearLayout>
-
-            <TextView style="@style/person_divider" />
-
-            <LinearLayout style="@style/person_row_main">
-
-                <TextView
-                    style="@style/person_text_main"
-                    android:text="当前公司" />
-
-                <TextView style="@style/air_cushion" />
-
-                <TextView
-                    style="@style/persom_text_describe"
-                    android:text="请输入公司名称" />
+                    android:text="" />
 
                 <ImageView style="@style/person_right_image" />
             </LinearLayout>
@@ -174,11 +186,11 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/person_save"
+        android:id="@+id/person_create_resume"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/green"
-        android:text="保存"
+        android:text="创建微简历"
         android:textColor="@color/white" />
 
 </LinearLayout>

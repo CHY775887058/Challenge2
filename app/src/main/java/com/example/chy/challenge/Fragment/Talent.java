@@ -27,7 +27,7 @@ public class Talent extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_talent,container,false);
-        popTalentExperience = new PopTalentExperience(Talent.this);
+//        popTalentExperience = new PopTalentExperience(Talent.this);
 
         initview(rootView);
         FragmentManager fragmentManager = getFragmentManager();
@@ -35,28 +35,20 @@ public class Talent extends Fragment implements View.OnClickListener{
         NoPosition noPosition = new NoPosition();
         transaction.replace(R.id.intalent_layout, noPosition);
         transaction.commit();
-
         return rootView;
     }
     private void initview(View rootView) {
-
-        btnNew = (RadioButton) rootView.findViewById(R.id.btnNew);
-        btnNew.setOnClickListener(this);
         btnExperience = (RadioButton) rootView.findViewById(R.id.btnExperience);
         btnExperience.setOnClickListener(this);
         btnEducation = (RadioButton) rootView.findViewById(R.id.btnEducation);
         btnEducation.setOnClickListener(this);
         tv = (TextView) rootView.findViewById(R.id.tv);
     }
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btnNew:
-                break;
             case R.id.btnExperience:
-                popTalentExperience.showAsDropDown(tv,btnExperience.getText().toString());
+//                popTalentExperience.showAsDropDown(tv,btnExperience.getText().toString());
                 break;
             case R.id.btnEducation:
                 break;

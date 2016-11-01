@@ -10,7 +10,7 @@ import android.widget.Button;
  * Created by 77588 on 2016/9/1.
  */
 public class Identity extends Activity implements View.OnClickListener {
-    private Button forpernson,formoney;
+    private Button forpernson, formoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +29,20 @@ public class Identity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.forperson:
-                if (true){
-                    startActivity(new Intent(this,PersonIformationTalent.class));
-                }else {
-                    startActivity(new Intent(this,WelcomTalent.class));
+                if (true) {
+                    startActivity(new Intent(this, PersonInformationTalent.class));
+                } else {
+                    startActivity(new Intent(this, WelcomTalent.class));
                 }
                 break;
             case R.id.formoney:
-                startActivity(new Intent(this,WelcomSalary.class));
+                if (true){
+                    startActivity(new Intent(this, PersonInformationChallenge.class));
+                }else {
+                    startActivity(new Intent(this, WelcomSalary.class));
+                }
                 break;
             default:
                 break;

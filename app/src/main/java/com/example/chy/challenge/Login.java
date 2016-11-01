@@ -82,7 +82,6 @@ public class Login extends Activity implements View.OnClickListener{
             default:
                 break;
         }
-
     }
 
     private void loginooo() {
@@ -105,11 +104,7 @@ public class Login extends Activity implements View.OnClickListener{
             Toast.makeText(mContext,R.string.net_error,Toast.LENGTH_SHORT).show();
             dialog.dismiss();
         }
-
     }
-
-
-
     @SuppressLint("HandlerLeak")
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -120,6 +115,24 @@ public class Login extends Activity implements View.OnClickListener{
                           try {
                               JSONObject jsonObject = new JSONObject(resault);
                               if ("success".equals(jsonObject.optString("status"))){
+                                  JSONObject json = new JSONObject(jsonObject.optString("status"));
+                                  Bin.DataBean bin = new Bin.DataBean();
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCity(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
+                                  bin.setCompany(json.getString(""));
                                   startActivity(new Intent(mContext,Identity.class));
                                   dialog.dismiss();
                                   finish();

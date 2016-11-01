@@ -5,19 +5,19 @@
     android:layout_height="match_parent"
     android:background="@color/bgc">
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="50dp">
         <include layout="@layout/title_back_compelete"/>
         <TextView
-            style="@style/title_text"
-            android:text="求职意向"/>
+            android:text="求职意向"
+            style="@style/title_text"/>
     </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         style="@style/objective_group_item">
         <LinearLayout
+            android:id="@+id/work_property"
             style="@style/objective_row_item">
             <TextView
                 style="@style/objective_left_textview"
@@ -122,4 +122,18 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+        <include layout="@layout/title_back_compelete"/>
+        <TextView
+            style="@style/title_text"
+            android:text="求职意向"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/PopFlag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 </LinearLayout>

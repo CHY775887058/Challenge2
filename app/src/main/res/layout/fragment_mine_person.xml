@@ -10,6 +10,7 @@
         <include layout="@layout/title"/>
             <!--设置按钮-->
             <ImageView
+                android:scaleType="centerInside"
                 android:background="@drawable/setting"
                 android:layout_alignParentRight="true"
                 android:id="@+id/setting"

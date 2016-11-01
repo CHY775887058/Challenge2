@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by 77588 on 2016/9/10.
  */
-public class PopTalentExperience implements PopupWindow.OnDismissListener,View.OnClickListener{
+public class PopResume implements PopupWindow.OnDismissListener{
     private String objectid;
     private  ListView experience;
     private Button cancel,complete;
@@ -31,22 +31,13 @@ public class PopTalentExperience implements PopupWindow.OnDismissListener,View.O
     private Context mcontext;
     private List<String> item;
     private ArrayAdapter<String> itemAdepter;
-    private View rootview;
 
-    public PopTalentExperience(Talent activity) {
+    public PopResume(Context mcontext,ArrayList list) {
 
-        this.activity = activity;
-        //碎片需要获取上一级所在活动
-        this.mcontext = activity.getActivity();
         View view = LayoutInflater.from(mcontext).inflate(R.layout.resume_popupwindow,null);
         initview(view);
 
-        item = new ArrayList<>();
-        item.add("全部");
-        item.add("应届生");
-        item.add("1年以内");
-        item.add("1-3年");
-        item.add("3-5年");
+        this.item = list;
         itemAdepter = new ArrayAdapter<String>(mcontext,android.R.layout.simple_list_item_1,item);
         experience.setAdapter(itemAdepter);
 
@@ -72,7 +63,6 @@ public class PopTalentExperience implements PopupWindow.OnDismissListener,View.O
      */
     public void dissmiss() {
         popupwindow.dismiss();
-
     }
 
     /**
@@ -91,14 +81,4 @@ public class PopTalentExperience implements PopupWindow.OnDismissListener,View.O
         popupwindow.update();
     }
 
-
-
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            default:
-                break;
-        }
-    }
 }

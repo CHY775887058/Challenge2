@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
  * Created by 77588 on 2016/10/21.
  */
 
-public class PersonIformationTalent extends Activity implements View.OnClickListener{
+public class PersonInformationTalent extends Activity implements View.OnClickListener{
     private RelativeLayout back;
     private Button save;
     @Override
